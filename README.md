@@ -12,7 +12,7 @@ SmartReview is a web-based tool that provides AI-powered code review suggestions
 
 ## 🖼️ Preview
 
-![SmartReview Screenshot](screenshot.png) <!-- Replace or remove if no image available -->
+![SmartReview - AI Code Review Assistant - Google Chrome 5_6_2025 3_20_40 PM](https://github.com/user-attachments/assets/cdc1e7e6-10e8-4cbc-a13f-86bcec13d4b3)
 
 ## 🛠️ Tech Stack
 
