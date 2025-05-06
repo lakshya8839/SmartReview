@@ -4,22 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartReview - AI Code Review Assistant</title>
-    <meta name="description" content="SmartReview - Get instant code reviews using AI" />
+    <meta name="description" content="SmartReview - Get instant code reviews using AI." />
     <meta name="author" content="SmartReview" />
 
     <meta property="og:title" content="SmartReview - AI Code Review Assistant" />
-    <meta property="og:description" content="Get instant code reviews using AI" />
+    <meta property="og:description" content="Get instant code reviews using AI." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <!-- Add a monospace font for code blocks -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
 
   <body>
@@ -28,55 +23,37 @@
         <div class="navbar-content">
           <div class="logo">
             <div class="logo-icon">
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                stroke-width="2" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
                 <path d="M16 18 22 12 16 6"></path>
                 <path d="M8 6 2 12 8 18"></path>
               </svg>
             </div>
             <span>SmartReview</span>
           </div>
-          
+
           <div class="nav-links">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="github-link">
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="16" 
-                height="16" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                stroke-width="2" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
-              >
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61
+                         c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77
+                         5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38
+                         0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5
+                         4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61
+                         6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
               GitHub
             </a>
-            
+
             <div class="dropdown">
               <button class="dropdown-toggle">
                 Resources
-                <svg
-                  class="dropdown-arrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
+                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m6 9 6 6 6-6"/>
                 </svg>
               </button>
@@ -90,7 +67,7 @@
                 <a href="#" class="dropdown-item">Contact Support</a>
               </div>
             </div>
-            
+
             <div class="avatar">
               <div class="avatar-fallback">DEV</div>
             </div>
@@ -103,8 +80,8 @@
       <div class="container">
         <div class="main-content">
           <h1>AI Code Review Assistant</h1>
-          <p class="subtitle">Enter a GitHub repository URL or paste your code directly for instant AI-powered code review</p>
-          
+          <p class="subtitle">Enter a GitHub repository URL or paste your code directly for instant AI-powered code review.</p>
+
           <div class="app-grid">
             <div class="code-input-section">
               <div class="section-header">
@@ -117,11 +94,11 @@
               <textarea id="codeInput" placeholder="Paste your code here to review..."></textarea>
               <button id="reviewButton" class="btn btn-primary">Review Code</button>
             </div>
-            
+
             <div class="review-results-section">
               <h2>Review Results</h2>
               <div id="resultsContainer" class="results-content">
-                <div class="placeholder-message">Enter code and click "Review Code" to get feedback</div>
+                <div class="placeholder-message">Enter code and click "Review Code" to get feedback.</div>
               </div>
             </div>
           </div>
@@ -134,6 +111,5 @@
     </footer>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-
   </body>
 </html>
